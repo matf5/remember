@@ -11,7 +11,7 @@ const foodyBody = {
 const meicanBody = {
   tag: 'text',
   text: {
-    content: '可以点加班餐啦，https://meican.com',
+    content: '需要加班餐记得点加班餐啦，https://meican.com',
     at_all: true
   }
 }
@@ -49,6 +49,10 @@ schedule.scheduleJob('0 0 11 * * *', function(){
 });
 // 加班餐
 schedule.scheduleJob('0 30 11 * * *', function(){
+  isWorkDays() && notify(meicanBody);
+});
+// 加班餐
+schedule.scheduleJob('0 30 14 * * *', function(){
   isWorkDays() && notify(meicanBody);
 });
 // 吃饭
