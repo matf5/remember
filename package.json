@@ -1,0 +1,18 @@
+{
+  "name": "remember",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "block_io": "^3.0.4",
+    "node-schedule": "^1.3.2",
+    "node-xlsx": "^0.16.1",
+    "psd": "^3.2.1",
+    "request": "^2.88.2"
+  }
+}
