@@ -25,7 +25,7 @@ const eatBody = {
 const goHomeBody = {
   tag: 'text',
   text: {
-    content: '9点了！快打车或刷加班券！',
+    content: '9点了！刷加班券走人啦！',
     at_all: true
   }
 }
