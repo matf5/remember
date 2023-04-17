@@ -37,12 +37,12 @@ const serviceSuccess = {
 }
 const notify = (obj) => {
   request({
-    url: 'https://openapi.seatalk.io/webhook/group/TUQjtWZuRLCQDaX92HVVgw',
+    url: 'https://openapi.seatalk.io/webhook/group/BmtOlkR5RXesM4akgWBBig',
     method: 'POST',
     body: JSON.stringify(obj)
   })
 }
-schedule.scheduleJob('0 0 18 * * 1', () => {
+schedule.scheduleJob('0 0 11 * * 1', () => {
   notify({
     tag: 'text',
     text: {
@@ -51,4 +51,5 @@ schedule.scheduleJob('0 0 18 * * 1', () => {
     }
   })
 })
-notify(serviceSuccess);
+console.log('create success', JSON.stringify(serviceSuccess));
+// notify(serviceSuccess);
