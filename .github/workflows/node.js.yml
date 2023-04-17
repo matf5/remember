@@ -17,9 +17,10 @@ jobs:
       - uses: actions/checkout@master  #采用main分支下的
            
       - name: Setup Node.js
-        uses: actions/setup-node@v2  #安装node.js
+        uses: actions/setup-node@v3  #安装node.js
         with:
           node-version: '14'
+          cache: 'npm'
           
       - name: Install Dependency       
         run: |
