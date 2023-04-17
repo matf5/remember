@@ -42,16 +42,13 @@ const notify = (obj) => {
     body: JSON.stringify(obj)
   })
 }
-const isWorkDays = () => new Date().getDay() < 6 && new Date().getDay() > 0;
-// schedule.scheduleJob('0 30 11 * * 1', () => {
-//   notify()
-// })
-// notify(serviceSuccess);
-
-notify({
-  tag: 'text',
-  text: {
-    content: 'Please attach the PRD link and name here if you want to review in today\'s internal meeting. https://docs.google.com/document/d/1a5QRewc8Am2bkBpj-N6scMlxtajax-IlsMz6rBIDMM0/edit',
-    at_all: true
-  }
-});
+schedule.scheduleJob('0 0 18 * * 1', () => {
+  notify({
+    tag: 'text',
+    text: {
+      content: 'Please attach the PRD link and name here if you want to review in today\'s internal meeting. https://docs.google.com/document/d/1a5QRewc8Am2bkBpj-N6scMlxtajax-IlsMz6rBIDMM0/edit',
+      at_all: true
+    }
+  })
+})
+notify(serviceSuccess);
