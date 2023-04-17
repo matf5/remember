@@ -24,4 +24,4 @@ jobs:
       - name: Install Dependency       
         run: |
           npm install
-          node 
+          node ./huiying.js
